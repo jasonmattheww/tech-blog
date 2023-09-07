@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Model-View-Controller",
+    "content": "Model-view-controller is a software design pattern commonly used for developing user interfaces that divides the related program logic into three interconnected elements."
+  },
+  {
+    "title": "Why do we use sequelize?",
+    "content": "Sequelize lets us connect to a database and perform operations without writing raw SQL queries."
+  },
+  {
+    "title": "How to use DotEnv",
+    "content": "To use DotEnv, first install it using the command: npm i dotenv. Then in your app, require and configure the package like this: require('dotenv').config()."
+  }
+]
