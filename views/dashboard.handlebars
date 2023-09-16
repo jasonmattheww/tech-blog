@@ -1,0 +1,24 @@
+<div class="container p-0">
+  {{#if posts.length}}
+  {{#each posts as |post|}}
+  <div class="post mb-3 mt-3 bg-secondary rounded">
+    <a href="/dashboard/edit/{{id}}" class="text-light text-decoration-none">
+      <input type="hidden" name="post-id" value="{{post.id}}">
+      <div>
+        <div class="row">
+          <div class="col-8">
+            <h4>{{title}}</h4>
+          </div>
+          <div class="col-4 text-right">
+            <span>{{format_date date_created}}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  {{/each}}
+  {{/if}}
+</div>
+<div class="text-center">
+  <button type="button" class="newPostBtn"><a href="/dashboard/new"><i class="bi bi-plus"></i> New Post</a></button>
+</div>
