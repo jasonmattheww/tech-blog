@@ -27,10 +27,10 @@ router.get('/', async (req, res) =>{
   }
 });
 
-// Edit comment
-router.put('/:id', withAuth, async (req, res) => {
+// Get all comments from one post
+router.get('/:id', withAuth, async (req, res) => {
   try {
-    const updateComment = await Comment.update(
+    const getComment = await Comment.findAll(
       {
         where: {
           id: req.params.id,
@@ -38,14 +38,14 @@ router.put('/:id', withAuth, async (req, res) => {
       }
     );
 
-    if (!updateComment[0]) {
+    if (!getComment[0]) {
       res
         .status(400)
         .json({ message: 'No comment found with this id'});
         return;
     }
 
-    res.status(200).json(updateComment);
+    res.status(200).json(getComment);
   } catch (err) {
     res.status(500).json(err);
   }
