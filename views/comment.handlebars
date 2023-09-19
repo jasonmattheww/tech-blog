@@ -1,0 +1,46 @@
+<div class="card mt-3">
+  <div class="card-header bg-dark text-light">
+    {{title}}
+    <span class="float-right">
+      Posted by {{user.name}} on {{format_date date_created}}
+    </span>
+  </div>
+  <div class="card-body border border-dark">
+    {{content}}
+  </div>
+</div>
+
+<!-- Display comments -->
+{{#each comments}}
+<div class="card mt-3">
+  <div class="card-header">
+    {{user.name}} commented on {{format_date date_created}}
+  </div>
+  <div class="card-body">
+    {{comment}}
+  </div>
+</div>
+{{/each}}
+
+<!-- Comment submission form -->
+<div class="card mt-3">
+  <div class="card-header bg-dark" id="empty-header">
+
+  </div>
+
+  <div class="card-body border border-dark">
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea class="form-control" id="comment"></textarea>
+    </div>
+
+    <input type="hidden" id="postId" name="postId" value="{{id}}">
+
+    <button type="submit" class="btn btn-dark btn-lg btn-block" id="submitBtn">Submit</button>
+
+    </form>
+  </div>
+</div>
+<br>
+
+<script src="/js/comment.js"></script>
