@@ -1,3 +1,11 @@
 .post a:hover {
   text-decoration: none;
 }
+
+.card-body a.text-dark:hover {
+  text-decoration: none;
+}
+
+#empty-header {
+  height: 40px;
+}
