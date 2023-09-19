@@ -1,0 +1,17 @@
+{{#if posts.length}}
+{{#each posts as |post|}}
+<div class="card mt-3">
+  <div class="card-header bg-dark text-light">
+    {{title}}
+    <span class="float-right">
+      Posted by {{user.name}} on {{format_date date_created}}
+    </span>
+  </div>
+  <div class="card-body border border-dark">
+    <a href="/post/{{id}}" class="text-dark">
+    {{content}}
+     </a>
+  </div>
+</div>
+{{/each}}
+{{/if}}
