@@ -13,7 +13,7 @@ A tech blog website where you can write and publish your blog posts and comment 
 
 ## Installation
 
-No installation needed to be able to use this website. Just visit this link to get taken to the website.
+No installation is needed to be able to use this website. Just visit this link to get taken to the website.
 
 https://tech-blog-be-43803630257e.herokuapp.com/
 
@@ -26,4 +26,4 @@ https://tech-blog-be-43803630257e.herokuapp.com/
 
 ## Code Source
 
-Got help with API routes from TA/Proffesor.
+Got help with API routes from TA/professor.
